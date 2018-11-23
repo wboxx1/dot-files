@@ -116,9 +116,24 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# added by Anaconda3 installer
+export PATH="/home/william/anaconda3/bin:$PATH"
+
+export ANDROID_HOME="/home/william/Android/Sdk"
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# added by travis gem
+[ -f /home/william/.travis/travis.sh ] && source /home/william/.travis/travis.sh
+
 # pyenv path setup
-export PATH="/home/wboxx/.pyenv/bin:$PATH"
+export PATH="~/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-alias config='/usr/bin/git --git-dir=/home/wboxx/.cfg/ --work-tree=/home/wboxx'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+#alias tmux="TERM=screen-256color-bce tmux"
