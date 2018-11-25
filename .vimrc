@@ -61,6 +61,8 @@ Plugin 'Quramy/tsuquyomi'
 " code folding
 Plugin 'tmhedberg/SimpylFold'
 
+Plugin 'rkulla/pydiction'
+
 "Colors!!!
 "Plugin 'altercation/vim-colors-solarized'
 Plugin 'jnurmine/Zenburn'
@@ -80,7 +82,7 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
+let g:pydiction_location = '~/.vim/bundle/Pydiction/complete-dict'
 filetype plugin indent on    " enables filetype detection
 let g:SimpylFold_docstring_preview = 1
 
@@ -160,7 +162,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_json_checkers = ['jsonlint']
 let g:syntastic_markdown_checkers = ['mdl', 'proselint']
 "let g:syntastic_perl_checkers =
-let g:syntastic_python_checkers = ['flake8']
+"let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_rst_checkers = ['rstcheck', 'proselint'] 
 let g:syntastic_ruby_checkers = ['reek', 'rubylint']
 let g:syntastic_sql_checkers = ['sqlint'] 
@@ -190,7 +192,7 @@ au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /^\t\+/
 " Make trailing whitespace be flagged as bad.
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-command RemoveWhitespace %s/\s\+$//e
+"command RemoveWhitespace %s/\s\+$//e
 
 " Wrap text after a certain number of characters
 au BufRead,BufNewFile *.py,*.pyw, set textwidth=100
