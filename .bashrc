@@ -137,3 +137,5 @@ eval "$(pyenv virtualenv-init -)"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 #alias tmux="TERM=screen-256color-bce tmux"
+. /home/william/anaconda3/etc/profile.d/conda.sh
+conda activate
